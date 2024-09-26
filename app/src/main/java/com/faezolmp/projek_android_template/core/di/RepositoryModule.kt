@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @Module(includes = [ExampleModule::class, DatabaseModule::class, NetworkModule::class])
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
+    @Singleton
     @Binds
     abstract fun provideRepository(repository: ImplRepository): Repository
 }
